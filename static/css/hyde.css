@@ -13,7 +13,6 @@
  * https://github.com/poole/hyde.
  */
 
-
 /*
  * Contents
  *
@@ -24,7 +23,6 @@
  * Themes
  */
 
-
 /*
  * Global resets
  *
@@ -32,11 +30,11 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "IBM Flex Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media (min-width: 58em) {
@@ -44,7 +42,6 @@ html {
     font-size: 20px;
   }
 }
-
 
 /*
  * Sidebar
@@ -56,7 +53,7 @@ html {
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.5);
   background-color: #202020;
 }
 @media (min-width: 48em) {
@@ -70,6 +67,11 @@ html {
   }
 }
 
+.footer {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 /* Sidebar links */
 .sidebar a {
   color: #fff;
@@ -79,8 +81,24 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
-  font-size: 3.25rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Profile Picture */
+.profile-picture {
+  display: block; /* Prevents inline alignment issues */
+  margin: 0 0 1rem 0; /* Align left and add bottom margin */
+  width: 150px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  border-radius: 10%; /* Make it circular */
+  object-fit: cover; /* Ensure the image covers the area well */
+}
+
+/* "More" link styling */
+.more {
+  text-align: right; /* Align the link to the right */
+  margin-top: 1rem; /* Add some space above the link */
 }
 
 /* Sidebar nav */
@@ -88,15 +106,33 @@ html {
   padding-left: 0;
   list-style: none;
 }
+
+/* Social Icons */
+.sidebar-social {
+  padding-bottom: 1.5rem; /* Add bottom padding */
+}
+
+.sidebar-social a {
+  color: #fff; /* Ensure icons inherit sidebar link color */
+  text-decoration: none; /* Remove underline from icons */
+  font-size: 1rem; /* Increase icon size */
+}
+
 .sidebar-nav-item {
   display: block;
 }
+
+a.sidebar-nav-item {
+  font-weight: 300; /* Make default nav items thinner */
+}
+
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
+
 .sidebar-nav-item.active {
-  font-weight: bold;
+  font-weight: 600; /* Make active nav item bolder */
 }
 
 /* Sticky sidebar
@@ -108,12 +144,11 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
+    right: 1rem;
     bottom: 1rem;
-    left:   1rem;
+    left: 1rem;
   }
 }
-
 
 /* Container
  *
@@ -122,7 +157,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
@@ -140,7 +175,6 @@ a.sidebar-nav-item:focus {
     margin-right: 4rem;
   }
 }
-
 
 /*
  * Reverse layout
@@ -165,8 +199,6 @@ a.sidebar-nav-item:focus {
     margin-right: 22rem;
   }
 }
-
-
 
 /*
  * Themes
@@ -247,4 +279,13 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/* Dark Blue */
+.theme-base-blue .sidebar {
+  background-color: #15284b;
+}
+.theme-base-blue .content a,
+.theme-base-blue .related-posts li a:hover {
+  color: #3266c7;
 }
